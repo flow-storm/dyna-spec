@@ -1,3 +1,3 @@
-# Type-Trek
+# Dyna-Spec
 
 WIP

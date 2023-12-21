@@ -1,4 +1,4 @@
-(ns type-trek.fn-sampler
+(ns dyna-spec.fn-sampler
 
   "When instrumented namespaces code runs, the sampler will collect fns
   into a map {fully-qualified-fn-symbol-1 {:args-types #{...}
@@ -19,7 +19,7 @@
 
   :var-meta is meta as returned by Clojure (meta (var fully-qualified-fn-symbol))"
 
-  (:require [type-trek.utils :as utils]
+  (:require [dyna-spec.utils :as utils]
             [clojure.string :as str]
             [clojure.pprint :as pp])
   (:import [java.util ArrayDeque]

@@ -1,6 +1,6 @@
-(ns type-trek.main
-  (:require [type-trek.fn-sampler :as fn-sampler]
-            [type-trek.docs :as docs])
+(ns dyna-spec.main
+  (:require [dyna-spec.fn-sampler :as fn-sampler]
+            [dyna-spec.docs :as docs])
   (:import [clojure.storm Tracer Emitter]))
 
 (defn- setup-storm []
@@ -41,7 +41,7 @@
 
 (defn run
 
-  "Run with clj -X:type-trek type-trek/run :jar-name \"my-app\" :test-fn dev-tester/run-test
+  "Run with clj -X:dyna-spec dyna-spec/run :jar-name \"my-app\" :test-fn dev-tester/run-test
 
   TODO
       "
@@ -73,4 +73,4 @@
         :jar-name "dev-tester"})
   )
 
-;; clj -Sforce -Sdeps '{:deps {docs/docs {:local/root "/home/jmonetta/my-projects/type-trek/dev-tester.jar"}} :aliases {:dev {:classpath-overrides {org.clojure/clojure nil} :extra-deps {com.github.flow-storm/clojure {:mvn/version "RELEASE"} com.github.flow-storm/flow-storm-dbg {:mvn/version "RELEASE"}}}}}' -A:dev
+;; clj -Sforce -Sdeps '{:deps {docs/docs {:local/root "/home/jmonetta/my-projects/dyna-spec/dev-tester.jar"}} :aliases {:dev {:classpath-overrides {org.clojure/clojure nil} :extra-deps {com.github.flow-storm/clojure {:mvn/version "RELEASE"} com.github.flow-storm/flow-storm-dbg {:mvn/version "RELEASE"}}}}}' -A:dev

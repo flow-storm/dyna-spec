@@ -1,4 +1,4 @@
-(ns type-trek.utils
+(ns dyna-spec.utils
   (:require [clojure.java.io :as io])
   (:import [clojure.lang PersistentArrayMap PersistentHashMap]
            [java.io File]))

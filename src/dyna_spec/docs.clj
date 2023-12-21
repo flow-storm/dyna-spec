@@ -1,5 +1,5 @@
-(ns type-trek.docs
-  (:require [type-trek.utils :as utils]
+(ns dyna-spec.docs
+  (:require [dyna-spec.utils :as utils]
             [clojure.tools.build.api :as tools.build])
   (:import [java.io File]))
 

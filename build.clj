@@ -15,7 +15,7 @@
 
 (defn jar [_]
   (clean nil)
-  (let [lib 'com.github.flow-storm/type-trek
+  (let [lib 'com.github.flow-storm/dyna-spec
         basis (b/create-basis {:project "deps.edn"})
         jar-file (format "%s/%s.jar" target-dir (name lib))
         src-dirs ["src"]]

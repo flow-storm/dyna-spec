@@ -6,13 +6,13 @@ clean:
 lint:
 	clj-kondo --config .clj-kondo/config.edn --lint src
 
-type-trek.jar:
+dyna-spec.jar:
 	clj -T:build jar
 
-install: type-trek.jar
-	mvn install:install-file -Dfile=target/type-trek.jar -DpomFile=target/classes/META-INF/maven/com.github.flow-storm/type-trek/pom.xml
+install: dyna-spec.jar
+	mvn install:install-file -Dfile=target/dyna-spec.jar -DpomFile=target/classes/META-INF/maven/com.github.flow-storm/dyna-spec/pom.xml
 
 deploy:
-	mvn deploy:deploy-file -Dfile=target/type-trek.jar -DrepositoryId=clojars -DpomFile=target/classes/META-INF/maven/com.github.flow-storm/type-trek/pom.xml -Durl=https://clojars.org/repo
+	mvn deploy:deploy-file -Dfile=target/dyna-spec.jar -DrepositoryId=clojars -DpomFile=target/classes/META-INF/maven/com.github.flow-storm/dyna-spec/pom.xml -Durl=https://clojars.org/repo
 
 
