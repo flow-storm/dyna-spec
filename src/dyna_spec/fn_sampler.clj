@@ -118,7 +118,9 @@
                      fn-call-data))
 
 (defn- collect-fn-call [fns-map {:keys [ns fn-name fn-args return]}]
-  (if (str/includes? fn-name "fn--")
+  (if (or (str/includes? fn-name "fn--")
+          ;; TODO: figure this out
+          (str/includes? fn-name "eval"))
     ;; don't collect anonymous functions
     fns-map
     (let [fq-fn-symb (symbol ns fn-name)
